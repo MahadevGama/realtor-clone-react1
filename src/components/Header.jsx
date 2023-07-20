@@ -5,7 +5,7 @@ import { useLocation,useNavigate } from 'react-router-dom'
 export default function Header() {
     const location=useLocation();
     const navigate=useNavigate();
-   // console.log(location.pathname);
+    console.log(location.pathname);
     function MatchPathRoute(route){
         if(route===location.pathname){
             return true;
@@ -22,7 +22,7 @@ export default function Header() {
             <ul className='flex space-x-10'>
                 <li className={` cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${MatchPathRoute("/") && "text-black border-b-red-500"}`} onClick={()=>navigate("/")}>Home</li>
                 <li className={` cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${MatchPathRoute("/Offers") && "text-black border-b-red-500"}`} onClick={()=>navigate("/Offers")}>Offers</li>
-                <li className={` cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${MatchPathRoute("/sign-in") && "text-black border-b-red-500"}`} onClick={()=>navigate("/sign-in")}>Sign in</li>
+                <li className={` cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent ${MatchPathRoute("/SignIn") && "text-black border-b-red-500"}`} onClick={()=>navigate("/SignIn")}>Sign in</li>
 
             </ul>
         </div>
